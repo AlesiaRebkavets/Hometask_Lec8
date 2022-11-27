@@ -18,13 +18,13 @@ public class Task1
     public static void ShowMassiveElement()
     {
         string? checkedValue = "abc";
+        int[] massive = { 8, 7, 1, 4, 2 };
+
+        Console.WriteLine("Input index of element in massive:");
+        string? inputedValue = Console.ReadLine();
+        checkedValue = inputedValue.Equals(string.Empty) ? null : inputedValue;
         try
         {
-            int[] massive = { 8, 7, 1, 4, 2 };
-
-            Console.WriteLine("Input index of element in massive:");
-            string? inputedValue = Console.ReadLine();
-            checkedValue = inputedValue.Equals(string.Empty) ? null : inputedValue;
             int inputtedNumber = Int32.Parse(checkedValue);             // InvalidCastException and NullReferenceException is possible
 
             int massiveElement = massive[inputtedNumber];               // IndexOutOfRangeException is possible 
